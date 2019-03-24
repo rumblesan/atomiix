@@ -20,7 +20,7 @@ To install the editor, first download and install [Atom](https://atom.io) and th
 
 ### Setup
 
-By default, Atomiix will expect the default samples and letter mappings to be in the **~/atomiix/default** folder. The easiest way to set this up is to download or clone this folder to your home directory.
+By default, Atomiix will expect the default samples and letter mappings to be in the **~/atomiix/default** folder. The easiest way to set this up is to download the default-project file from the [releases](https://github.com/rumblesan/atomiix/releases) page and unzip it into your home directory.
 It's also possible to change the default project directory by changing the settings in the Atom plugin.
 
 ### Custom Projects
