@@ -25,8 +25,11 @@ It's also possible to change the default project directory by changing the setti
 
 ### Custom Projects
 
-There is also support for custom projects. If the _*.ixi_ file that you load in atom is in a folder containing a file called **atomiix.project** then Atomiix will check for a **samples** folder, a **keyMapping.ixi** file and a **synthdefs.scd** file and load these if they exist.
+There is also support for custom projects. If the _*.ixi_ file that you load in atom is in a folder containing a file called **atomiix.project** then Atomiix will check for a **samples** folder, a **keyMapping.yaml** file and a **synthdefs.scd** file and load these if they exist.
 
+### Atom
+
+It's possibly worth disabling the *bracket-matcher* plug-in in Atom so that it doesn't add in extra closing parentheses when changing the volume of an agent. This can be done from the Atom -> Preferences -> Packages menu.
 
 ## Running
 
