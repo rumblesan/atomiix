@@ -1,8 +1,8 @@
 # Atomiix
 
-Atomiix is a re-implementation of the Ixilang live-coding environment.
+Atomiix is a re-implementation of the Ixi lang live-coding environment.
 
-The documentation already assumes some knowledge of Ixilang, and needs to be greatly improved.
+The documentation already assumes some knowledge of Ixi lang, and needs to be greatly improved.
 
 There are also bugs, though this is just about at the stage where it's usable and hopefully useful.
 
@@ -18,18 +18,22 @@ Once that's done, open the SuperCollider IDE and run the following code to use t
 
 To install the editor, first download and install [Atom](https://atom.io) and then the [atomiix](https://atom.io/packages/atomiix) package.
 
+
 ### Setup
 
 By default, Atomiix will expect the default samples and letter mappings to be in the **~/atomiix/default** folder. The easiest way to set this up is to download the default-project file from the [releases](https://github.com/rumblesan/atomiix/releases) page and unzip it into your home directory.
 It's also possible to change the default project directory by changing the settings in the Atom plugin.
 
+
 ### Custom Projects
 
 There is also support for custom projects. If the _*.ixi_ file that you load in atom is in a folder containing a file called **atomiix.project** then Atomiix will check for a **samples** folder, a **keyMapping.yaml** file and a **synthdefs.scd** file and load these if they exist.
 
+
 ### Atom
 
 It's possibly worth disabling the *bracket-matcher* plug-in in Atom so that it doesn't add in extra closing parentheses when changing the volume of an agent. This can be done from the Atom -> Preferences -> Packages menu.
+
 
 ## Running
 
@@ -53,9 +57,9 @@ To evaluate code, any of the following key combinations can be used :-
 Alt-Left can be used to evaluate lines and free the agents on those lines.
 
 
-## Differences from original Ixilang
+## Differences from original Ixi lang
 
-There are a number of differences between Atomiix and the original Ixilang. Some of these are deliberate, some just haven't been implemented yet.
+There are a number of differences between Atomiix and the original Ixi lang. Some of these are deliberate, some just haven't been implemented yet.
 
 This list isn't exhaustive as there will likely be some differences that have been overlooked.
 
@@ -72,14 +76,21 @@ This list isn't exhaustive as there will likely be some differences that have be
 * All the tuning functionality (I don't understand how it works. Feel free to explain it to me)
 * Agent specific scales
 * Score sequencing
-* Plenty of commands
-  - `swap`, `replace`, `insert`, `remove`, `invert`, `order`, `hash`, `beer`, `coffee`, `LSD`, `detox`
+* Meta-Agents
+* The *intoxicant* commands
+  - `hash`, `beer`, `coffee`, `LSD`, `detox`
 * MIDI in/out
 * snapshots
 * `coder`, `autocode`, `matrix`
 * `suicide` and `hotline`
-* Chords in melodic scores
 * Score operators working as commands
+* Auto-coder
+* Recording sound file functionality
+
+
+### Translations
+
+Like Ixi lang, Atomiix supports translations of the language. Both in terms of the error and info messages displayed, and the language itself. Translations need to be added to the language and editor repositories currently, so please either open a pull-request with the changes, or get in contact so we can make it happen.
 
 
 ## TODO
