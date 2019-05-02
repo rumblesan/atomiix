@@ -4,12 +4,12 @@ Atomiix is a re-implementation of the Ixi lang live-coding environment.
 
 The documentation already assumes some knowledge of Ixi lang, and needs to be greatly improved.
 
-There are also bugs, though this is just about at the stage where it's usable and hopefully useful.
+There are also bugs, though things are about at the stage where it's usable and hopefully useful.
 
 
 ## Installation
 
-Atomiix has two parts, the audio engine written in SuperCollider and the Atom editor plugin.
+Atomiix has two parts, the audio engine written in SuperCollider and the Atom editor plug-in.
 
 Installing SuperCollider should just involve going to the [Download](https://supercollider.github.io/download) page on the website, downloading the most recent version for your platform, and then running the installer.
 Once that's done, open the SuperCollider IDE and run the following code to use the [Quarks](http://doc.sccode.org/Guides/UsingQuarks.html) tool and install the atomiix quark.
@@ -37,22 +37,22 @@ It's possibly worth disabling the *bracket-matcher* plug-in in Atom so that it d
 
 ## Running
 
-To use Atomiix, start up the audio engine by running the following in the SuperCollider IDE
+To use Atomiix, start up the audio engine by running the following in the SuperCollider IDE.
 
 `Atomiix.setup(57120, 57121);`
 
 Create a file in Atom with the *.ixi* extension.
 
-From the *Atomiix* sub menu from the *Packages* menu in Atom, then click *Start Atomiix*.
+From the *Atomiix* sub menu in the *Packages* menu in Atom, click *Start Atomiix*.
 
 
 ## Key mappings
 
 To evaluate code, any of the following key combinations can be used :-
 
+* Ctrl-Enter
 * Alt-Up
 * Alt-Right
-* Ctrl-Enter
 
 Alt-Left can be used to evaluate lines and free the agents on those lines.
 
@@ -63,7 +63,7 @@ There are a number of differences between Atomiix and the original Ixi lang. Som
 
 This list isn't exhaustive as there will likely be some differences that have been overlooked.
 
-### Improved Functionality
+### Improved Editor Functionality
 
 * Multiple lines can be evaluated at once. Just select them and run an evaluate command.
 
@@ -75,7 +75,7 @@ This list isn't exhaustive as there will likely be some differences that have be
 
 * All the tuning functionality (I don't understand how it works. Feel free to explain it to me)
 * Agent specific scales
-* Score sequencing
+* The `sequence` command
 * Meta-Agents
 * The *intoxicant* commands
   - `hash`, `beer`, `coffee`, `LSD`, `detox`

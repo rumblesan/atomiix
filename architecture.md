@@ -10,12 +10,15 @@ Essentially there are three main parts :-
 
 The structure can be roughly broken down as follows :-
 
-* Atom takes editor lines, selected by the user, and passes them to the language processor
+* Atom takes lines of code, selected by the user, and passes them to the language processor
 * The language processor parses and interprets those lines and returns some number of actions
 * Those actions will either be Audio actions or Editor actions
 * Audio actions will be converted to OSC messages and sent to SuperCollider by Atom
+  - This could be a new agent score to play, or freeing an existing agent.
 * Editor actions will be handled by Atom
+  - This could be modifying the score text of an agent in the editor.
 * In some cases SuperCollider will send OSC messages to Atom
+  - An agent finishing its repeats, or a callback firing.
 * These will be converted into Inbound actions and handled by the language processor
 
 ## Actions
@@ -32,13 +35,25 @@ Groups are currently just the most recently active agent line and the marks spec
 
 Remove a mark group, primarily used when freeing an agent.
 
-#### ReplaceScore
+#### ReplaceText
 
-Replace the score string for a given agent
+Replace the text in one or more sections of a marked group.
 
 #### ReplaceLine
 
 Replace an entire line with the given new string. Used with the `grid` command for example.
+
+#### DisplayInfo
+
+Will be used to get the editor to display help and info text.
+
+#### DisplayAgentState
+
+Style the line containing an agent
+
+#### FlashMarkedText
+
+Temporarily highlight a line. Primarily for `future` commands triggering.
 
 
 ### Audio Actions
@@ -52,6 +67,10 @@ Run the specified method against an agent. e.g. `shake jimi`
 #### FreeAgent
 
 Free an existing agent.
+
+#### NapAgent
+
+Mute/sleep an agent but don't free it.
 
 #### AddAgentFX
 
@@ -93,8 +112,10 @@ These are actions that will be sent from the audio engine to the language interp
 
 If an agent has a finite number of repeats, then this will be sent when it finishes.
 
-**NOTE** Currently slightly buggy if agent is re-evaluated as this will be sent multiple times.
-
 #### CallbackTriggered
 
 Sent when a callback timer is up.
+
+#### AgentStateChange
+
+Sent if an agents state changes. Sleeping to waking for example.
