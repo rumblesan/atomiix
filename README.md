@@ -12,6 +12,7 @@ There are also bugs, though things are about at the stage where it's usable and 
 Atomiix has two parts, the audio engine written in SuperCollider and the Atom editor plug-in.
 
 Installing SuperCollider should just involve going to the [Download](https://supercollider.github.io/download) page on the website, downloading the most recent version for your platform, and then running the installer.
+The [SC3 Plugins](https://github.com/supercollider/sc3-plugins) extension is required, but the instructions for that are pretty simple and can be found on the project repository.
 Once that's done, open the SuperCollider IDE and run the following code to use the [Quarks](http://doc.sccode.org/Guides/UsingQuarks.html) tool and install the atomiix quark.
 
 `Quarks.install("https://github.com/rumblesan/atomiix.quark.git")`
@@ -106,4 +107,3 @@ Drop me an email at guy@rumblesan.com
 ## License
 
 BSD License.
-
