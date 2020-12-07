@@ -31,7 +31,7 @@ Notes are played in a scale from 1 to 9, where 1 is the tonic and spaces represe
 ### Percussive
 
 ```
-// square brackets indicate melodic score (synthesis or samples)
+// vertical lines (pipes) indicate percussive score
 agentname  ->   |o   x    o s x   |
 ```
 
